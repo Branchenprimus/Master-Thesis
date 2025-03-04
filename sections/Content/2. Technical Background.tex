@@ -1,0 +1,86 @@
+\section{Technical Background}
+\subsection{Large Language Models}
+- The historical progress in \gls{nlp} evolved from statistical to neural language modeling and then from \glspl{plm} to \glspl{llm}. While conventional language modeling (LM) trains task-specific models in supervised settings, \glspl{plm} are trained in a self-supervised setting on a large corpus of text [7, 8, 9] with the aim of learning a generic representation that is shareable among various \gls{nlp} 
+
+tasks.\cite{naveedComprehensiveOverviewLarge2024}
+
+- The fundamental idea behind language models, as articulated by Radford et al. (2019), is their ability to perform unsupervised multitask learning by leveraging the vast amounts of natural language data available on the internet. Unlike traditional approaches that rely on well-defined supervised learning tasks, language models with sufficient capacity can infer and perform a wide range of tasks implicitly, solely by predicting and understanding natural language sequences. This capability arises from their training objective, which focuses on forward prediction—anticipating the next word in a sequence based on prior context. By doing so, language models can effectively learn the underlying structure and tasks demonstrated in natural language, enabling them to generalize to diverse applications without explicit task-specific training. This approach not only showcases the flexibility of language models but also highlights their potential to bridge the gap between supervised tasks and the vast unstructured knowledge encoded in natural language data.\cite{radfordLanguageModelsAre}
+
+- The introduction of the Transformer architecture by Vaswani et al. (2017) marked a significant breakthrough in the development of sequence transduction models by replacing traditional recurrent and convolutional networks with a design based entirely on attention mechanisms. The Transformer’s architecture, centered around the self-attention mechanism, enables it to capture dependencies between tokens regardless of their positional distance within the input sequence.\cite{vaswaniAttentionAllYou2023}
+
+- \glspl{llm} have achieved remarkable success, though they still face significant limitations, especially in domain-specific or knowledge-intensive tasks\cite{gaoRetrievalAugmentedGenerationLarge2024}
+
+- \glspl{llm} offer a more flexible approach to knowledge processing and utilization, allowing for context-aware reasoning and the ability to adapt to novel information or prompts \cite{huangReasoningLargeLanguage2023}.
+
+\subsubsection{Overview of \glspl{llm}}
+This subsubsection should explain the different \glspl{llm} that are available. From encoder decoder models over decoder only models and others. It should explain different benchmarks, that are used to classify \glspl{llm}.
+Also it should point out the fundamentals of how \glspl{llm} work. This includes:
+
+- Tokenization
+
+Tokenization is an essential pre-processing step in \gls{llm} training that parses the text into non-decomposing units called tokens. Tokens can be characters, subwords, symbols, or words, depending on the tokenization process. Some of the commonly used tokenization schemes in \glspl{llm} include wordpiece, \gls{bpe}, and unigramLM.\cite{mielkeWordsCharactersBrief2021}
+
+
+- Encoding Positions
+
+
+- Attention in \glspl{llm} \cite{vaswaniAttentionAllYou2023}
+
+
+- Activation Functions
+
+
+- Layer Normalization
+
+
+- Distributed \gls{llm} Training
+
+
+- Libraries
+
+
+- Data PreProcessing
+
+
+- Architectures
+
+
+- Pre-Training Objectives
+
+
+- \glspl{llm} Scaling Laws
+
+
+- \glspl{llm} Adaptation Stages
+
+
+- Prompting/Utilization
+
+
+- Evaluation
+
+
+5.2. Evaluation Datasets and Tasks The evaluation of \glspl{llm} is important in gauging their proficiency and limitations. This process measures the model’s ability to comprehend, generate, and interact with human language across a spectrum of tasks. Evaluating a language model  is divided into two broader categories: 1) \gls{nlu} and 2) \gls{nlg}. It is emphasized that tasks in \gls{nlu} and \gls{nlg} are softly categorized and are often used interchangeably in the literature. Natural Language Understanding: It measures the language understanding capacity of language models. It encompasses multiple tasks, including sentiment analysis, text classification, natural language inference, question answering, commonsense reasoning, mathematical reasoning, reading comprehension, etc. Natural Language Generation: It assesses the language generation capabilities of \glspl{llm} by understanding the provided input context. It includes tasks such as summarization, sentence completion, machine translation, dialogue generation, etc. Numerous datasets are proposed for each task, evaluating \glspl{llm} against different characteristics. To provide an overview of evaluation datasets, we briefly discuss a few famous datasets within each category and offer a comprehensive list of datasets in Table 9. Moreover, we show a detailed overview of the training datasets and evaluation tasks and benchmarks used by various pre-trained \glspl{llm} in Table 10 and fine-tuned \glspl{llm} in Table 11. We also compare the top-performing \glspl{llm} in various \gls{nlp} tasks in Table 12.\cite{mielkeWordsCharactersBrief2021}
+
+\subsubsection{\gls{llm} Applications in \gls{kgqa}}
+This subsubsection should explain the usage of \glspl{llm} in the context of \gls{kgqa} and the implications it has on the developemnt of more advanced \gls{kgqa} systems
+
+\subsubsection{In Context Learning}
+Since my work focuses on in context learning, this subsubsection is about in context learning, how it works and what the limitations are (needle in the heystack problem)
+
+In addition to better generalization and domain adaptation, \glspl{llm} appear to have emergent abilities, such as reasoning, planning, decision-making, in-context learning, answering in zero-shot settings, etc. These abilities are known to be acquired by them due to their gigantic scale even when the pretrained \glspl{llm} are not trained specifically to possess these attributes [22, 23, 24]. Such abilities have led \glspl{llm} to be widely adopted in diverse settings, including multi-modal, robotics, tool manipulation, question answering, autonomous agents, etc. Various improvements have also been suggested in these areas either by task-specific training [25, 26, 27, 28, 29, 30, 31] or better prompting [32].\cite{naveedComprehensiveOverviewLarge2024}
+
+In context learning helps a \gls{llm} infer that a specific task is requested by the user. So comes that GPT-2's translation capabilities were tested with in context examples of words, that were already translated. In context learning is can also be described as conditioning the language model on a context of example tasks or patterns, which the model recognises and understands.\cite{radfordLanguageModelsAre}
+
+\subsection{Knowledge Graphs}
+\subsubsection{Fundamentals of Knowledge Graphs}
+This subsubsection explains the fundamentals of KGs, how they are used, why they are used and how they are constructed, maintained and queried.
+
+\subsubsection{Knowledge Graph Shapes}
+This subsubsection should explain what \gls{kg} shapes are and how they are beeing extracted. Also this section should explain how they can be used to enhance \gls{llm} in context learning
+
+\subsection{Question Answering over Knowledge Graphs}
+\subsubsection{Ralated Work}
+\subsubsection{Challenges}
+\paragraph{Automated Graph Generation}
+\paragraph{Manual Graph Generation}
